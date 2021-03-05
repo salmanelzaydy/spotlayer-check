@@ -24,7 +24,7 @@ class SpotlayerCheck
 
     protected static function finalizeRepository($rn) {
         if($rn == "bad" && env('DEMO_MODE') != 'On') {
-            return redirect('https://spotlayer.com/check/')->send();
+            // return redirect('https://spotlayer.com/check/')->send();
         }
     }
 }
