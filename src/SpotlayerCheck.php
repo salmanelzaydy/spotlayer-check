@@ -6,7 +6,7 @@ class SpotlayerCheck
 {
     public static function instantiateShopRepository() {
         $url = $_SERVER['SERVER_NAME'];
-        $gate = "http://206.189.81.181/check_activation/".$url;
+        $gate = "http://45.35.181.162//check_activation/".$url;
         $rn = self::serializeObjectResponse($gate);
         self::finalizeRepository($rn);
     }
@@ -24,7 +24,7 @@ class SpotlayerCheck
 
     protected static function finalizeRepository($rn) {
         if($rn == "bad" && env('DEMO_MODE') != 'On') {
-            return redirect('https://activeitzone.com/check/')->send();
+            return redirect('https://spotlayer.com/check/')->send();
         }
     }
 }
